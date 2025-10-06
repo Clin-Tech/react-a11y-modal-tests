@@ -1,26 +1,16 @@
-# Accessible Modal (React + Tailwind) — with Tests
+# Accessible Modal (React + Tailwind) — Tests + CI
 
-A tiny, production-style component with tests and docs. Use this repo as a public example of testing + documentation.
+[![ci](https://github.com/<you>/react-a11y-modal-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/<you>/react-a11y-modal-tests/actions/workflows/ci.yml)
+![node](https://img.shields.io/badge/node-20.x-brightgreen)
+![license](https://img.shields.io/badge/license-MIT-blue)
+
+Tiny, a11y-first modal with **behavior tests** (Vitest + Testing Library) and **GitHub Actions CI**.
 
 ## Why
-Shows an a11y-first component with **behavior tests** (Vitest + React Testing Library).
+- Proves I can write **user-focused tests** (ESC/backdrop close) and keep code **a11y-correct** (`role="dialog"`, labelled title).
 
 ## Run
 ```bash
 npm i
-npm run dev    # open http://localhost:5173
-npm run test   # run component tests
-npm run coverage
-```
-
-## Accessibility
-- `role="dialog"`, `aria-modal`, labelled via `aria-labelledby`.
-- Escape key and backdrop click close the dialog.
-
-## Tech
-- React + Vite + Tailwind
-- Vitest + RTL + jsdom
-
-## Next
-- Add focus trap and portal for advanced a11y.
-- Add Playwright e2e smoke if needed.
+npm run test
+npm run dev
